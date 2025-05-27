@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title> Assignment Home page Morfor Didacus</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    nav.navbar {
+      background-color: #1c1449;
+      color:orange;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+    }
+
+    nav.navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav.navbar a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav.navbar a:hover {
+  color: orange;
+    }
+
+    .hero {
+  position: relative;
+  background: url('your-image.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(8px);
+  transform: scale(1.1); 
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  color:#000;
+  text-align: center;
+  padding-top: 0%;
+}
+
+    .hero {
+      background: url('hero.png') no-repeat center center/cover;
+      padding: 4rem 2rem;
+      color: #000;
+      text-align: center;
+      background-color: #333;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .cards {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+      flex: 1 1 30%;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-body {
+      padding: 1rem;
+    }
+
+    .card-body h3 {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav.navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  a{
+    text-decoration:none;
+  }
+  
+  body.no-scroll {
+  overflow: hidden;
+}
+
+#hamburger {
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 1rem;
+  z-index: 1001;
+  color:#fff;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100%;
+  background-color: #f6f6f6;
+  color:#000;
+  padding: 1.5rem;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s ease-in-out;
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.drawer.open {
+  right: 0;
+}
+
+.drawer .close-btn {
+  background: none;
+  border: none;
+  color: red;
+  font-size: 1.9rem;
+  font-weight:bold;
+  float: right;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  top:0;
+}
+.drawer a{
+  color:#000;
+}
+.drawer ol {
+  padding: 0;
+}
+
+.drawer ol li {
+  margin: 1rem 0;
+  margin-left:5px;
+  padding-left:20px;
+  font-weight: bold;
+  color:orange;
+  
+}
+  .drawer li{
+    padding:15px;
+    border-bottom:1px solid #555;
+  }
+  
+  .nav span{
+    
+    color:#fff;
+  }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2><span class="hamburger" onclick="toggleDrawer()">&#9776;</span> AFAYI solutions</h2>
+    <ul>
+      <li><a href="index.html" style="text-decoration: underline;">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+<div class="drawer" id="drawer">
+  <ol>
+    <span class="close-btn" onclick="toggleDrawer()">&times;</span> 
+    <h2>Names of Interns </h2>
+    <li><a href="#">Anapa Bless Anapa </a></li>
+    <li><a href="#">Akafua Ryan </a></li>
+    <li><a href="#">Leku Mafor Elizabeth </a></li>
+    <li><a href="#">Ngeanyi Marginelle Folazong </a></li>
+    <li><a href="#">Fah Hosea akam</a></li>
+    <li><a href="#">Lekwauwa Daniel </a></li>
+    <li><a href="#">Morfor Didacus</a></li>
+    <li><a href="#">Atem Diana </a></li>
+    <li><a href="#">Njiwu kimbuya Alimatu</a></li>
+    <li><a href="#">Ayuk Brandon Atem</a></li>
+    <li><a href="#">Elibe fidelis nkede </a></li>
+    <li><a href="#">Ngouffo Tsayem Francky Bravel</a></li>
+    
+    <li><a href="#">Eugene Caleb Sama Galabe</a></li>
+    <li><a href="#">Njofie Rochenel Zelefacj</a></li>
+    <li><a href="#">Diang Miclene Bum </a></li>
+    <li><a href="#">Darren Klein Moki Nangh </a></li>
+    <li><a href="#">Ngilla Righteousness Iye</a></li>
+    <li><a href="#">Chissom Abigail</a></li>
+   <li><a href="#">Faukwetta Ngosong Johnelly  </a></li>
+    <li><a href="#">Geh Corlins Kedze</a></li>
+    <li><a href="#">Youta Kelvin</a></li>
+   
+    
+  </ol>
+</div>
+  
+  
+  
+  <section class="hero">
+    <div class="hero-content">
+    <h1>Afayi Interns May <span style="color: orange;">2025</span></h1>
+    <p>Delivering quality and professional services to our interns</p>
+  </div>
+  </section>
+
+  <section class="section">
+    <h2>Internship Highlights</h2><br>
+    <div class="cards">
+      <div class="card">
+        <img src="inten.jpg" alt="Internship Skill 1">
+        <div class="card-body">
+          <h3>Professional Web Design</h3>
+          <p>Hands-on experience designing modern, user-centered websites that meet real client needs.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="app-developement.jpg" alt="Internship Skill 2">
+        <div class="card-body">
+          <h3>Full-Stack Development</h3>
+          <p>Built and maintained responsive web apps using current frameworks and backend tools.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="mentorship.png" alt="Internship Skill 3">
+        <div class="card-body">
+          <h3>Real-World SEO Practices</h3>
+          <p>Implemented SEO strategies to enhance web visibility, traffic, and ranking for live projects.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="ui-ux-design.png" alt="Internship Skill 4">
+        <div class="card-body">
+          <h3>UI/UX Design</h3>
+          <p>Learned how to structure user flows, wireframes, and interfaces that improve usability.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="team.gif" >  <div class="card-body">
+          <h3>Team Collaboration</h3>
+          <p>Worked with professionals using version control, agile tools, and project management platforms.</p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="client.jpg" alt="Internship Skill 6">
+        <div class="card-body">
+          <h3>Client Communication</h3>
+          <p>Gained real communication skills by presenting work, gathering feedback, and iterating quickly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <p>&copy; 2025 Afayi solutions Assignment . All rights reserved.</p>
+    <p>Contact us at: <a href="mailto:dreamtech.freelance@gmail.com" style="color: #aaa;">Afayitech@gmail.com</a></p>
+    <p>Follow us on 
+      <a href="#" style="color:orange;">Facebook</a> |
+      <a href="#" style="color:orange;">Twitter</a> |
+      <a href="#" style="color:orange;">LinkedIn</a>
+    </p>
+  </footer>
+<script>
+  function toggleDrawer() {
+    const drawer = document.getElementById("drawer");
+    drawer.classList.toggle("open");
+  }
+  
+  function toggleDrawer() {
+  const drawer = document.getElementById("drawer");
+  drawer.classList.toggle("open");
+
+  document.body.classList.toggle("no-scroll", drawer.classList.contains("open"));
+}
+</script>
+</body>
+</html>

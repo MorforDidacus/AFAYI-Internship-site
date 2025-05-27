@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - AFAYI Solutions</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: #1c1449;
+      color: white;
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+header p {
+  color:orange;
+}
+    nav {
+      background-color:#1c1449;
+      display: flex;
+      justify-content: center;
+      padding: 0.8rem 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: orange;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      color: #3b2762;
+    }
+
+    .mission-vision {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 3rem;
+    }
+
+    .mission-vision .box {
+      flex: 1 1 45%;
+      background: white;
+      padding: 2rem;
+      border-left: 5px solid orange;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .team-member {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .team-member h3 {
+      margin: 0.5rem 0;
+      color: #3b2762;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 3rem 0;
+      padding-left: 40px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 4px;
+      background: #3b2762;
+    }
+
+    .timeline-event {
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .timeline-event::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background: orange;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      z-index: 1;
+    }
+
+    .timeline-event h4 {
+      color: #3b2762;
+      margin-left:15px;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: orange;
+    }
+
+    @media (max-width: 768px) {
+      .mission-vision {
+        flex-direction: column;
+      }
+    }
+  a{
+    text-decoration:none;
+  }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>About AFAYI Solutions</h1>
+    <p>Empowering interns with real-world experience and mentorship</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html" style="text-decoration: underline; color:orange;">About</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="container">
+    <h2 class="section-title">Our Mission & Vision</h2>
+    <div class="mission-vision">
+      <div class="box">
+        <h3>Our Mission</h3>
+        <p>To mentor aspiring developers through hands-on training and practical exposure in real projects, cultivating industry-ready professionals.</p>
+      </div>
+      <div class="box">
+        <h3>Our Vision</h3>
+        <p>To become a leading internship hub where young tech talents are transformed into future tech leaders with ethical values and creativity.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Meet the Team</h2>
+    <div class="team">
+      <div class="team-member">
+        <img src="ceo.png" alt="mr Dirane">
+        <h3> Mr Ngala Dirane</h3>
+        <p>Lead Mentor,CEO & Software Engineer</p>
+      </div>
+      <div class="team-member">
+        <img src="services.jpg" alt="swanky">
+        <h3> Mme Blessed Syvera</h3>
+        <p>UI/UX Designer</p>
+      </div>
+      <div class="team-member">
+        <img src="swanky.png" alt="Team Member 3">
+        <h3> Mr .Swanky </h3>
+        <p>Backend Developer</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Our Journey</h2>
+    <div class="timeline">
+      <div class="timeline-event">
+        <h4>2023 - Foundation</h4>
+        <p>AFAYI Solutions was founded with the goal of offering free hands-on training for developers and designers.</p>
+      </div>
+      <div class="timeline-event">
+        <h4>2024 - Expansion</h4>
+        <p>Launched multiple training programs in web development, mobile apps, and digital marketing.</p>
+      </div>
+      <div class="timeline-event">
+        <h4>2025 - Internship May Cohort</h4>
+        <p>Hosted the largest internship cohort with 50+ participants and 10 mentors, delivering 15 real-world projects.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 AFAYI Solutions. All rights reserved.</p>
+    <p>Contact us: <a href="mailto:dreamtech.freelance@gmail.com">dreamtech.freelance@gmail.com</a></p>
+    <p>Follow us on 
+      <a href="dreamtech-freelance.ct.ws">Facebook</a>, 
+      <a href="dreamtech-freelance.ct.ws/developer.html">Twitter</a>, 
+      <a href="dreamtech-freelance.ct.ws/web development.html">LinkedIn</a>
+    </p>
+  </footer>
+
+</body>
+</html>
